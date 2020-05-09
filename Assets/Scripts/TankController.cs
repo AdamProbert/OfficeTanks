@@ -37,14 +37,18 @@ public class TankController : MonoBehaviour
         }        
     }
 
-    public void Aim(float x, float z)
+    public void AimAtPoint(float x, float z)
     {   
         float y = tankTurret.transform.position.y;
         Vector3 aimPoint = new Vector3(x, y, z);
         tankTurret.transform.LookAt(aimPoint);
+    }
 
-        // Quaternion toRotation = Quaternion.FromToRotation(tankTurret.transform.forward, aimDir);
-        // tankTurret.transform.rotation = Quaternion.Lerp(tankTurret.transform.rotation, toRotation, tankStats.turretTurnSpeed * Time.time);
+    public void AimAtDirection(float x, float z)
+    {
+        float y = tankTurret.transform.position.y;
+        // Vector3 aimDir = new Vector3(x, y, z);
+        tankTurret.transform.eulerAngles = new Vector3( 0, Mathf.Atan2(x, z) * 180 / Mathf.PI, 0 );
     }
 
     public void Shoot()

@@ -305,6 +305,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50.000004, y: 23.867, z: 0}
+--- !u!1 &251500516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1010670940006203773, guid: 33930d14de127e246ad188e11a3f3c5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1010670939683251620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &251500522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251500516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c1911e178b9b36e44b85bcdd5a3543e0,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2fa2ceb-77ef-4c50-9950-26367552c934
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32bf093e-37db-4e7b-8398-e033f7c81aed
+    m_ActionName: Player/Look[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ef799c0b-618f-40a4-92c6-21f6b8f53028
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 712e7846-38a5-4154-9c21-a92e1db58fec
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8a4b9908-45cd-47ac-8605-29363aa77062
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 842f4f2d-f13d-4bd9-9a93-e181cd7e482b
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cb663e97-e4a0-4a4c-ab13-3a27840bbbbb
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 45a846eb-c516-43a1-9ebb-eeb957689d79
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4d53d24f-99e0-4752-b8c3-d861b654abc0
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c8eeb0c8-3be5-4df1-923c-00d9a95e6cec
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6fcfdc11-7201-4e3b-a821-aaa5341ad5ad
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33085c05-614e-4a64-9f45-558a2f1d385c
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 544b0b98-5df4-4cbf-84a8-69f3402a61ed
+    m_ActionName: UI/TrackedDeviceOrientation
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &441954877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -949,6 +1038,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1846110342}
+    - target: {fileID: 1010670940006203770, guid: 33930d14de127e246ad188e11a3f3c5e,
+        type: 3}
+      propertyPath: debugMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1010670940006203773, guid: 33930d14de127e246ad188e11a3f3c5e,
         type: 3}
       propertyPath: m_Name
@@ -1015,7 +1109,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: -4247433967092058448, guid: 33930d14de127e246ad188e11a3f3c5e, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 33930d14de127e246ad188e11a3f3c5e, type: 3}
 --- !u!1001 &3231684272946565279
 PrefabInstance:
