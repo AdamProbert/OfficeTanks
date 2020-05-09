@@ -12,4 +12,6 @@ public class TankStatsScriptableObject : ScriptableObject
     public float bodyTurnSpeed;
 
     public float bulletSpeed;
+
+    public float fireRate;
 }

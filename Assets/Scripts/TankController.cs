@@ -9,12 +9,17 @@ public class TankController : MonoBehaviour
 
     [SerializeField] Transform projectileSpawn;
     [SerializeField] GameObject projectile;
+
+    [SerializeField] bool debugMode;
     private Rigidbody rb;
     public TankStatsScriptableObject tankStats;
+
+    private float nextFireTime;
 
     private void Awake() 
     {
         rb = GetComponent<Rigidbody>();
+        nextFireTime = Time.time;
     }
 
     public void Move(float x, float z)
@@ -53,8 +58,12 @@ public class TankController : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject bullet = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation);
-	    bullet.GetComponent<Rigidbody>().AddForce(projectileSpawn.forward * tankStats.bulletSpeed);
+        if(Time.time > nextFireTime)
+        {
+            if(debugMode) Debug.Log("Shooting projectile");
+            GameObject p = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation);
+            p.GetComponent<Projectile>().SetParentTank(this.gameObject);    
+            nextFireTime = Time.time + tankStats.fireRate;
+        }        
     }
 }
-

@@ -19,3 +19,4 @@ MonoBehaviour:
   turretTurnSpeed: 1
   bodyTurnSpeed: 0.1
   bulletSpeed: 50
+  fireRate: 0.2

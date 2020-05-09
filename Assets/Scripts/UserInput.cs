@@ -12,6 +12,8 @@ public class UserInput : MonoBehaviour
     Camera cam;
     TankController tankController;
     Vector2 moveInput = Vector2.zero;
+
+    bool fireInput = false;
     Vector2 mousePosition = Vector2.zero;
     string currentControlScheme = "";
 
@@ -63,6 +65,11 @@ public class UserInput : MonoBehaviour
                 Debug.LogWarning("Unknown control scheme, unable to handle.");
             }
         }
+
+        if(fireInput == true)
+        {
+            tankController.Shoot();
+        }
     }
 
     public void OnMove(InputValue value)
@@ -83,8 +90,16 @@ public class UserInput : MonoBehaviour
         currentControlScheme = playerInput.currentControlScheme;
     }
 
-    public void OnFire()
+    public void OnFire(InputValue value)
     {
-        tankController.Shoot();
+        Debug.Log("Value: " +value.Get<float>());
+        if(value.Get<float>() >= 0.5)
+        {
+            fireInput = true;
+        }
+        else
+        {
+            fireInput = false;
+        }
     }
 }
