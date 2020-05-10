@@ -84,6 +84,11 @@ public class UserInput : MonoBehaviour
         if(debugMode) Debug.Log("MousePosition: " + mousePosition);
     }
 
+    public void OnJump(InputValue value)
+    {
+        tankController.Jump();
+    }
+
     public void OnControlsChanged()
     {
         if(debugMode) Debug.Log("Controls changed to: " + playerInput.currentControlScheme);
@@ -92,7 +97,6 @@ public class UserInput : MonoBehaviour
 
     public void OnFire(InputValue value)
     {
-        Debug.Log("Value: " +value.Get<float>());
         if(value.Get<float>() >= 0.5)
         {
             fireInput = true;

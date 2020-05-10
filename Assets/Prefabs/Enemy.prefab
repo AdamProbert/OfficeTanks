@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 7671113981070346192}
   - component: {fileID: 7671113981070346194}
   - component: {fileID: 1458020974}
+  - component: {fileID: 7400694323770211106}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Player
@@ -314,7 +315,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7671113981070346195}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e54bb0e025cb9c045bc50fab866ceaee, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.3578767
@@ -333,9 +334,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4294cdc0ca56aa449b282222383d1f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderTimer: 1
-  wanderRadius: 15
+  aistats: {fileID: 11400000, guid: e69e46b6e7a51a74cb9ae132aa4c48f4, type: 2}
   debugMode: 1
+--- !u!65 &7400694323770211106
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671113981070346195}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6933652, y: 0.4686575, z: 0.8203678}
+  m_Center: {x: 0.016965985, y: 0.43485796, z: 0.022030354}
 --- !u!1 &7671113981666677166
 GameObject:
   m_ObjectHideFlags: 0

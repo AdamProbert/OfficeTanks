@@ -46,7 +46,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.075
   m_Center: {x: 0, y: 0, z: 0.000000029802322}
 --- !u!54 &5734326598873626531
 Rigidbody:
@@ -63,7 +63,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 1
 --- !u!114 &5734326598873626541
 MonoBehaviour:
   m_ObjectHideFlags: 0

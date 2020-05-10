@@ -15,8 +15,12 @@ MonoBehaviour:
   tankName: Prototype
   tankDescription: Prototype
   moveSpeed: 20
+  jumpVelocity: 10
+  jumpRate: 3
   maxSpeed: 5
   turretTurnSpeed: 1
   bodyTurnSpeed: 0.1
   bulletSpeed: 50
-  fireRate: 0.2
+  fireRate: 0.35
+  JumpFx: {fileID: 19810258, guid: 100c3c5f186d78340a7ede5d8593d326, type: 3}
+  JumpSound: {fileID: 8300000, guid: f9754e6cea1147c49b57914b2fb2bf3d, type: 3}

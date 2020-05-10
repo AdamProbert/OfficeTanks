@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39cd9ba079b487d4f9a02ad8d21c22b8, type: 3}
   m_Name: BulletStats
   m_EditorClassIdentifier: 
-  projectileName: Bullet
-  projectileSpeed: 20
+  projectileSpeed: 8
   damage: 20
-  impactForce: 250
+  impactForce: 200
   lifeTime: 15

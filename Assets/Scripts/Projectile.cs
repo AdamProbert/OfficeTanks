@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
 
     private void Start() 
     {
-        SoundManager.Instance.PlayOneShot(fireSound);
+        // SoundManager.Instance.PlayOneShot(fireSound);
         rb.AddForce(transform.forward * projectileStats.projectileSpeed, ForceMode.VelocityChange);
     }
 
@@ -45,7 +45,7 @@ public class Projectile : MonoBehaviour
         {
             Instantiate(playerHitFx, other.contacts[0].point, Quaternion.identity);
             if(debugMode) Debug.Log("Projectile hit player");
-            SoundManager.Instance.Play(playerHitSound);
+            SoundManager.Instance.PlayOneShot(playerHitSound, .8f);
         }
         else
         {
@@ -55,7 +55,8 @@ public class Projectile : MonoBehaviour
 
         if(other.gameObject.GetComponent<Rigidbody>())
         {
-            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(projectileStats.impactForce, other.contacts[0].point, 3f, 0.5f);
+            // other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(projectileStats.impactForce, other.contacts[0].point, 3f, 0.4f);
         }        
 
         Destroy(this.gameObject);

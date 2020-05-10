@@ -17,3 +17,4 @@ MonoBehaviour:
   huntDistance: 5
   chaseTime: 5
   shootDistance: 10
+  accuracy: 1

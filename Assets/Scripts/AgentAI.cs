@@ -77,7 +77,12 @@ public class AgentAI : MonoBehaviour
 
     private void Shoot()
     {
-        tankController.AimAtPoint(targetPlayer.transform.position.x, targetPlayer.transform.position.z);
+        Vector3 approxTarget = targetPlayer.transform.position;
+        approxTarget.x += Random.Range(-aistats.accuracy, aistats.accuracy);
+        approxTarget.z += Random.Range(-aistats.accuracy, aistats.accuracy);
+        approxTarget.y = transform.position.y;
+        if(debugMode) Debug.DrawLine(transform.position, approxTarget, Color.red);
+        tankController.AimAtPoint(approxTarget.x, approxTarget.z);
         tankController.Shoot();
     }
 
@@ -106,5 +111,20 @@ public class AgentAI : MonoBehaviour
         NavMeshHit navHit;
         NavMesh.SamplePosition (randomDirection, out navHit, distance, layermask);
         return navHit.position;
+    }
+
+    private void RemoveDeadPlayerFromKnownPlayers(GameObject player)
+    {
+        playerList.Remove(player);
+    }
+
+    private void OnEnable()
+    {
+        EventManager.StartListening("PlayerDeath", RemoveDeadPlayerFromKnownPlayers);
+    }
+ 
+    private void OnDisable()
+    {
+        EventManager.StopListening("PlayerDeath", RemoveDeadPlayerFromKnownPlayers);
     }
 }

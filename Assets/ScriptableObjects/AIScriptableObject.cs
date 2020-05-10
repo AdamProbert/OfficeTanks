@@ -8,4 +8,6 @@ public class AIScriptableObject : ScriptableObject
     public float huntDistance;
     public float chaseTime;
     public float shootDistance;
+
+    public float accuracy;
 }

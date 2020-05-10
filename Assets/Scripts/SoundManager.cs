@@ -33,10 +33,11 @@ public class SoundManager : MonoBehaviour
 		DontDestroyOnLoad (gameObject);
 	}
 
-    public void PlayOneShot(AudioClip clip)
+    public void PlayOneShot(AudioClip clip, float volumeScale=1)
     {
-        EffectsSource.PlayOneShot(clip);
+        EffectsSource.PlayOneShot(clip, volumeScale);
     }
+
 	// Play a single clip through the sound effects source.
 	public void Play(AudioClip clip)
 	{
