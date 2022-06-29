@@ -598,7 +598,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: b5e62c6d4d948084891a21a554711e56, type: 3}
@@ -705,7 +705,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 2f3b7eeceee08ec408ede5dbe279d4f9, type: 3}
@@ -880,7 +880,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 50bf619065206134e8129173535d0364, type: 3}
@@ -2441,7 +2441,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 5f4b404a756a4814ea8b0d2abe6db7eb, type: 3}
@@ -2823,7 +2823,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 2f3b7eeceee08ec408ede5dbe279d4f9, type: 3}
@@ -3692,7 +3692,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 2f3b7eeceee08ec408ede5dbe279d4f9, type: 3}
@@ -3837,6 +3837,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7671113980046299411, guid: 33930d14de127e246ad188e11a3f3c5e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae7ce48d14173294fb6f2c6623f39d78, type: 2}
     - target: {fileID: 7671113981070346194, guid: 33930d14de127e246ad188e11a3f3c5e,
         type: 3}
       propertyPath: m_Material
@@ -3918,6 +3923,11 @@ PrefabInstance:
       propertyPath: m_Drag
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7671113981666677164, guid: 33930d14de127e246ad188e11a3f3c5e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae7ce48d14173294fb6f2c6623f39d78, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33930d14de127e246ad188e11a3f3c5e, type: 3}
 --- !u!1001 &3231684272946565279
